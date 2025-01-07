@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Two Numbers</title>
+  <style>
+      body{
+        height: 200px;
+        background-image: linear-gradient(to left, blue, pink);
+      }
+      .con1{
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          height: 80vh;
+      }
+      #plus{
+          font-weight: 900;
+          font-size: 30px;
+      }
+      button{
+        width:20%;
+        border:3px solid yellow;
+        position: relative;
+        left: 35%;
+        top:-50%;
+      }
+      p{
+        color:white;
+        font-weight: 900;
+        font-size: 20px;
+      }
+  </style>
+</head>
+<body>
+    <div class="con1">
+        <input type="number" id="num1" placeholder="Enter first number">
+        <span id="plus">+</span>
+        <input type="number" id="num2" placeholder="Enter second number">
+        <pre><p> Result<span id="result"> 0</span></p></pre>
+    </div>
+      <button onclick="addNumbers()">Add</button>
+  <script>
+    function addNumbers() {
+      var num2 = parseInt(document.getElementById("num2").value);
+      var num1 = parseInt(document.getElementById("num1").value);
+
+      var sum = num1 + num2;
+      document.getElementById("result").innerHTML = sum;
+    }
+  </script>
+
+</body>
+</html>
